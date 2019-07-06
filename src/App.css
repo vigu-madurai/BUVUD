@@ -1,0 +1,46 @@
+.App {
+	background: lightgrey;
+	font-size: 18px;
+	color: gray;
+	font-weight: 500;
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	justify-content: center;
+	font-family: Lato;
+	overflow: hidden;
+}
+
+.first-layer-padding {
+	padding: 16px 24px;
+}
+
+.inner-padding {
+	padding: 6px 20px;
+}
+
+.right-container {
+	width: calc(100% - 200px);
+}
+
+.header {
+	height: 50px;
+	background: #eff7ff;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+}
+
+.search-icon {
+	margin-right: 10px;
+}
+
+.body-container {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	top: 62px;
+}

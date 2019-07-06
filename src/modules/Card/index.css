@@ -1,0 +1,28 @@
+.card-container {
+	position: relative;
+	background: #eff7ff;
+	flex-direction: column;
+	border-radius: 6px;
+}
+
+.card-heading-wrapper {
+	border-bottom: solid 1px grey;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.icons-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.minimize-icon {
+	margin: 0 5px;
+	font-size: 28px;
+}
+
+.close-icon {
+	margin: 0 5px;
+}
