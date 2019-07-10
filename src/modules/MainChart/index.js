@@ -1,8 +1,9 @@
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 import React from 'react';
+// import './App.css';
 
-import './index.css';
-
-export const Card = () => {
+export const MainChart = () => {
 	return (
 		<div className='card-container'>
 			<div className='card-heading-wrapper inner-padding'>

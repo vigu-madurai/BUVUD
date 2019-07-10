@@ -1,10 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
 
-export const Menu = () => {
+export const Menu = props => {
+	const {
+		currentUser: { profile_picture, user_name }
+	} = props;
 	return (
 		<>
 			<div className='left-container-heading'>
@@ -12,8 +15,8 @@ export const Menu = () => {
 				<FontAwesomeIcon icon={faBars} className='bars' />
 			</div>
 			<div className='left-container-user-profile-wrapper'>
-				<FontAwesomeIcon icon={faUserCircle} className='avatar-img' />
-				Jack Williams
+				<img src={profile_picture} className='avatar-img' />
+				{user_name}
 			</div>
 		</>
 	);

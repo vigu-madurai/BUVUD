@@ -29,5 +29,6 @@
 }
 
 .avatar-img {
-	font-size: 52px;
+	background: white;
+	border-radius: 50%;
 }
