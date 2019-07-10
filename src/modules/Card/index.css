@@ -4,7 +4,6 @@
 	flex-direction: column;
 	border-radius: 6px;
 	margin: 20px;
-	height: 100%;
 }
 
 .card-heading-wrapper {
@@ -24,6 +23,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .minimize-icon {
@@ -36,10 +36,13 @@
 }
 
 .team-members {
-	width: 30%;
-	height: 40%;
+	height: 150px;
 }
 
-.hide-card {
+.hide {
 	height: 0;
+}
+
+.arrow-icon {
+	transform: rotate(45deg);
 }

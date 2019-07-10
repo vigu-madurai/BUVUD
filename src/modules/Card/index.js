@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowsAltV } from '@fortawesome/free-solid-svg-icons';
 import { TeamMembers } from '../TeamMembers/index';
 import { MainChart } from '../MainChart/index';
 
@@ -13,12 +14,12 @@ export const Card = props => {
 		<div className={`card-container`}>
 			<div className='card-heading-wrapper inner-padding'>
 				{type}
-				<div className='icons-wrapper'>
-					<span className='minimize-icon' onClick={() => setMinimize(!minimize)}>
-						{' '}
-						-{' '}
-					</span>
-					<span className='close-icon'> x </span>
+				<div className='icons-wrapper' onClick={() => setMinimize(!minimize)}>
+					{!minimize ? (
+						<span className='minimize-icon'> - </span>
+					) : (
+						<FontAwesomeIcon icon={faArrowsAltV} className='arrow-icon' />
+					)}
 				</div>
 			</div>
 			{data && !minimize ? (
