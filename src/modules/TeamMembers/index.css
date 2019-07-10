@@ -1,0 +1,11 @@
+.team-member-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.tm-right {
+	display: inline-flex;
+	flex-direction: column;
+	margin-left: 10px;
+}

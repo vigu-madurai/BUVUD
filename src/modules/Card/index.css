@@ -3,6 +3,7 @@
 	background: #eff7ff;
 	flex-direction: column;
 	border-radius: 6px;
+	margin: 20px;
 }
 
 .card-heading-wrapper {
@@ -10,12 +11,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 30px;
+}
+
+.card-body-wrapper {
+	height: calc(100% - 60px);
+	overflow-y: auto;
 }
 
 .icons-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .minimize-icon {
@@ -25,4 +33,16 @@
 
 .close-icon {
 	margin: 0 5px;
+}
+
+.team-members {
+	height: 150px;
+}
+
+.hide {
+	height: 0;
+}
+
+.arrow-icon {
+	transform: rotate(45deg);
 }

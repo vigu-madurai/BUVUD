@@ -15,8 +15,20 @@
 	padding-bottom: 16px;
 }
 
+.hamburger-menu {
+	width: 10px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	background: #182132;
+	justify-content: center;
+}
+
 .bars {
-	color: #474957;
+	color: white;
 }
 
 .left-container-user-profile-wrapper {
@@ -29,5 +41,6 @@
 }
 
 .avatar-img {
-	font-size: 52px;
+	background: white;
+	border-radius: 50%;
 }
