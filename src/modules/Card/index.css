@@ -3,6 +3,8 @@
 	background: #eff7ff;
 	flex-direction: column;
 	border-radius: 6px;
+	margin: 20px;
+	height: 100%;
 }
 
 .card-heading-wrapper {
@@ -10,6 +12,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 30px;
+}
+
+.card-body-wrapper {
+	height: calc(100% - 60px);
+	overflow-y: auto;
 }
 
 .icons-wrapper {
@@ -25,4 +33,13 @@
 
 .close-icon {
 	margin: 0 5px;
+}
+
+.team-members {
+	width: 30%;
+	height: 40%;
+}
+
+.hide-card {
+	height: 0;
 }

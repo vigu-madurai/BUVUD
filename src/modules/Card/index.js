@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { TeamMembers } from '../TeamMembers/index';
+import { MainChart } from '../MainChart/index';
 
 import './index.css';
 
-export const Card = () => {
+export const Card = props => {
+	const { type, data, className } = props;
+	const [minimize, setMinimize] = useState(false);
+
 	return (
-		<div className='card-container'>
+		<div className={`card-container`}>
 			<div className='card-heading-wrapper inner-padding'>
-				Projects
+				{type}
 				<div className='icons-wrapper'>
-					<span className='minimize-icon'> - </span>
+					<span className='minimize-icon' onClick={() => setMinimize(!minimize)}>
+						{' '}
+						-{' '}
+					</span>
 					<span className='close-icon'> x </span>
 				</div>
 			</div>
-			<div className='card-body-wrapper inner-padding'>Body</div>
+			{data && !minimize ? (
+				<div className={`card-body-wrapper inner-padding ${className}`}>
+					{type === 'Project Activity' ? <MainChart data={data} /> : null}
+					{type === 'Team Members' ? <TeamMembers data={data} /> : null}
+					{/* {type === 'Manager Activity' ? <MainChart data={data} /> : null} */}
+				</div>
+			) : null}
 		</div>
 	);
 };
