@@ -1,17 +1,20 @@
 .card-container {
 	position: relative;
-	background: #eff7ff;
+	background: white;
 	flex-direction: column;
+	margin: 20px 10px;
 	border-radius: 6px;
-	margin: 20px;
 }
 
 .card-heading-wrapper {
-	border-bottom: solid 1px grey;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 30px;
+	height: 40px;
+	background: #182132;
+	color: white;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
 }
 
 .card-body-wrapper {
@@ -35,8 +38,14 @@
 	margin: 0 5px;
 }
 
+.minimize-icon:hover,
+.close-icon:hover,
+.arrow-icon:hover {
+	opacity: 0.7;
+}
+
 .team-members {
-	height: 150px;
+	height: 200px;
 }
 
 .hide {
@@ -45,4 +54,15 @@
 
 .arrow-icon {
 	transform: rotate(45deg);
+}
+
+.sub-containers {
+	width: 50%;
+	height: 100%;
+}
+
+@media all and (max-width: 1023px) {
+	.sub-containers {
+		width: 100%;
+	}
 }

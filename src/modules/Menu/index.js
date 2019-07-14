@@ -8,20 +8,23 @@ export const Menu = props => {
 	const {
 		currentUser: { profile_picture, user_name }
 	} = props;
-	const [hamburger, setHamburger] = useState(window.innerWidth > 1023 ? false : true);
+	const [hamburger, setHamburger] = useState(window.innerWidth >= 1023 ? false : true);
 	if (hamburger) {
+		// show the small hamburger menu
 		return (
 			<div className='hamburger-menu first-layer-padding'>
 				<FontAwesomeIcon
 					icon={faBars}
 					className='bars'
 					onClick={() => {
+						props.hideRightContainer(hamburger);
 						setHamburger(!hamburger);
 					}}
 				/>
 			</div>
 		);
 	}
+	// opened hamburger menu
 	return (
 		<div className='left-container first-layer-padding'>
 			<div className={`left-container-heading`}>
@@ -30,7 +33,11 @@ export const Menu = props => {
 					icon={faBars}
 					className='bars'
 					onClick={() => {
-						setHamburger(!hamburger);
+						// disable hiding hamburger menu for desktop users
+						if (window.innerWidth <= 1023) {
+							props.hideRightContainer(hamburger);
+							setHamburger(!hamburger);
+						}
 					}}
 				/>
 			</div>
@@ -38,6 +45,15 @@ export const Menu = props => {
 				<img src={profile_picture} className='avatar-img' />
 				{user_name}
 			</div>
+			{/* Dummy menu values for presentation */}
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
+			<div className='left-side-menu' />
 		</div>
 	);
 };

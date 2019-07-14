@@ -1,8 +1,10 @@
 .left-container {
-	width: 200px;
+	width: 300px;
 	box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.63);
 	background: #182132;
 	color: white;
+	position: relative;
+	transition: 0.5s ease-in;
 }
 
 .left-container-heading {
@@ -11,36 +13,81 @@
 	align-items: center;
 	font-size: 22px;
 	font-weight: 500;
-	border-bottom: solid 2px #474957;
+	border-bottom: solid 1px white;
 	padding-bottom: 16px;
 }
 
 .hamburger-menu {
 	width: 10px;
-	position: fixed;
+	position: relative;
 	left: 0;
 	top: 0;
-	height: 100%;
 	display: flex;
 	align-items: flex-start;
 	background: #182132;
 	justify-content: center;
+	font-size: 22px;
+	transition: 0.5s ease-in;
+}
+
+.hamburger-menu-side-panel {
+	width: 100%;
+	position: relative;
+	background: black;
+	opacity: 0.1;
 }
 
 .bars {
 	color: white;
 }
 
+.bars:hover {
+	opacity: 0.7;
+}
+
 .left-container-user-profile-wrapper {
-	padding: 16px 0;
+	padding: 8px 0;
 	font-weight: 400;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	border-bottom: solid 2px #474957;
+	border-bottom: solid 1px white;
 }
 
 .avatar-img {
 	background: white;
 	border-radius: 50%;
+	margin-right: 10px;
+	border: solid 1px;
+}
+
+.left-side-menu {
+	height: 10px;
+	border-radius: 3px;
+	opacity: 0.2;
+	background: white;
+	margin: 40px 20px;
+}
+
+@media all and (max-width: 1023px) {
+	.hamburger-menu {
+		height: 100vh;
+	}
+	.left-container {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		z-index: 1;
+	}
+	.left-container-heading,
+	.hamburger-menu {
+		font-size: 20px;
+	}
+}
+
+@media all and (max-width: 567px) {
+	.left-container-heading,
+	.hamburger-menu {
+		font-size: 18px;
+	}
 }
