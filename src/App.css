@@ -1,14 +1,16 @@
 .App {
 	background: lightgrey;
-	font-size: 18px;
 	color: gray;
 	font-weight: 500;
 	display: flex;
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	justify-content: center;
 	font-family: Lato;
 	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .first-layer-padding {
@@ -16,23 +18,31 @@
 }
 
 .inner-padding {
-	padding: 6px 20px;
+	padding: 10px 20px;
 }
 
 .right-container {
-	width: calc(100% - 200px);
+	width: calc(100% - 300px);
+	position: relative;
+}
+
+.hide-right-container {
+	opacity: 0;
+	cursor: not-allowed;
+	transition: 0.5s ease-in;
 }
 
 .header {
 	height: 50px;
-	background: #eff7ff;
+	background: white;
 	display: flex;
 	align-items: center;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	z-index: 1;
-	cursor: disabled;
+	cursor: not-allowed;
+	box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.63);
 }
 
 .search-icon {
@@ -40,8 +50,35 @@
 }
 
 .body-container {
-	height: calc(100% - 100px);
+	height: calc(100% - 50px);
 	overflow: auto;
 	position: relative;
-	top: 62px;
+	top: 50px;
+}
+
+.body-container-sub-wrapper {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 300px;
+	padding-top: 20px;
+}
+
+.loader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media all and (max-width: 1023px) {
+	.right-container {
+		width: calc(100% - 48px);
+	}
+	.body-container-sub-wrapper {
+		display: flex;
+		flex-direction: column;
+		height: unset;
+	}
 }
