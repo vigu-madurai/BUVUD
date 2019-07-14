@@ -1,0 +1,33 @@
+.filter-wrapper {
+	display: inline-flex;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+.filter-wrapper div {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.ddown {
+	margin-left: 10px;
+}
+
+.selected-filter {
+	padding: 10px 0;
+	text-align: center;
+	color: black;
+}
+
+@media all and (max-width: 1023px) {
+	.filter-wrapper {
+		font-size: 14px;
+	}
+}
+
+@media all and (max-width: 567px) {
+	.filter-wrapper {
+		font-size: 12px;
+	}
+}
