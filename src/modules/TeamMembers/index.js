@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 
 export const TeamMembers = props => {
+	// Team Members Widget
 	return props.data.map(el => {
 		return (
 			<div className='team-member-wrapper' key={el.user_name}>
